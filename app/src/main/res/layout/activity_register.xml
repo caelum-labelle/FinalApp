@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/get"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:text="Let\'s Get
+        Started\!"
+        android:textColor="#622D9A"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#A2A2A2"
+        android:textSize="14dp"
+        android:layout_below="@+id/get"
+        android:text="Empower your financial future with knowledge and investment, all in one place." />
+
+
+    <TextView
+        android:text="@string/register"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#622D9A"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@string/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/user_bg"
+            android:drawablePadding="12dp"
+            android:hint="@string/username"
+            android:padding="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/email_bg"
+            android:drawablePadding="12dp"
+            android:hint="@string/email"
+            android:padding="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass"
+            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pass_bg"
+            android:drawablePadding="12dp"
+            android:padding="15dp"
+            android:layout_marginBottom="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmpass"
+            android:hint="@string/confirmpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pass_bg"
+            android:drawablePadding="12dp"
+            android:padding="15dp"
+            android:layout_marginBottom="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:text="@string/register"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/already"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Already have an account?"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/signin"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/signin"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="#622D9A" />
+
+
+</LinearLayout>
