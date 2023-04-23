@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_bg"/>
+    <item
+        android:id="@+id/explore"
+        android:title="Explore"
+        android:icon="@drawable/explore_bg"/>
+    <item
+        android:id="@+id/social"
+        android:title="Social"
+        android:icon="@drawable/post_bg"/>
+    <item
+        android:id="@+id/portfolio"
+        android:title="Portfolio"
+        android:icon="@drawable/portfolio_bg"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/user_bg"/>
+</menu>
