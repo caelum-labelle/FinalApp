@@ -26,4 +26,16 @@
     <string name="portfolio_fragment">Portfolio Fragment</string>
     <string name="profile_fragment">Profile Fragment</string>
     <string name="social_fragment">Social Fragment</string>
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="social">Social</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="profile">Profile</string>
+    <string name="back">Yey, you\'re back!</string>
+    <string name="text">Let us do it for you, while you also build your wealth and put your money to work, effortlessly.</string>
+    <string name="dont">Don\'t have an account?</string>
+    <string name="get">Let\'s Get Started!</string>
+    <string name="text2">Empower your financial future with knowledge and investment, all in one place.</string>
+    <string name="already">Already have an account?</string>
+    <string name="log">Login</string>
 </resources>

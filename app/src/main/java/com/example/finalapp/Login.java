@@ -46,10 +46,17 @@ public class Login extends AppCompatActivity {
 
                 if (phoneTxt.isEmpty() || passwordTxt.isEmpty()) {
                     Toast.makeText(Login.this, "Please enter your mobile or password", Toast.LENGTH_SHORT).show();
-                }
-                else {
-
-                }
+                } FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                mAuth.signInWithEmailAndPassword(phoneTxt, passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()) {
+                            Toast.makeText(Login.this, "Success", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Login.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
 

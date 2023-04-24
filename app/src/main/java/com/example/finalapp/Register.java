@@ -36,8 +36,8 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        final EditText username = findViewById(R.id.username);
+        FirebaseAuth mauth = FirebaseAuth.getInstance();
+        final EditText email = findViewById(R.id.email);
         final EditText phone = findViewById(R.id.phone);
         final EditText password = findViewById(R.id.password);
         final EditText confirmpass = findViewById(R.id.confirmpass);
@@ -50,13 +50,13 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
 
                 //get data from EditTexts into String values
-                final String usernameTxt = username.getText().toString();
+                final String emailTxt = email.getText().toString();
                 final String phoneTxt = phone.getText().toString();
                 final String passTxt = password.getText().toString();
                 final String conTxt = confirmpass.getText().toString();
 
                 //check if user fill all the fields before sending data to firebase
-                if (usernameTxt.isEmpty() || phoneTxt.isEmpty() || passTxt.isEmpty()) {
+                if (emailTxt.isEmpty() || phoneTxt.isEmpty() || passTxt.isEmpty()) {
                     Toast.makeText(Register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 }
 
@@ -65,6 +65,18 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                    mauth.createUserWithEmailAndPassword(emailTxt, passTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()) {
+                                Toast.makeText(Register.this, "Account created successfuly.", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(Register.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                    /*
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -89,7 +101,7 @@ public class Register extends AppCompatActivity {
 
                         }
                     });
-
+                    */
                 }
             }
         });

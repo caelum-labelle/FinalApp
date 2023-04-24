@@ -13,19 +13,21 @@
         android:id="@+id/get"
         android:layout_width="355dp"
         android:layout_height="wrap_content"
-        android:text="Let\'s Get Started\!"
+        android:text="@string/get"
         android:textColor="#622D9A"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#A2A2A2"
         android:textSize="14sp"
-        android:layout_below="@+id/get"
-        android:text="Empower your financial future with knowledge and investment, all in one place." />
+        android:text="@string/text2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
 
 
     <TextView
@@ -36,25 +38,25 @@
         android:layout_marginTop="20dp"
         android:textColor="#622D9A"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
 
-    <TextView
-        android:id="@string/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:drawableLeft="@drawable/user_bg"
+            android:drawableStart="@drawable/user_bg"
             android:drawablePadding="12dp"
-            android:hint="@string/username"
-            android:padding="15dp" />
+            android:hint="@string/email"
+            android:padding="15dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -66,10 +68,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:drawableLeft="@drawable/phone_bg"
+            android:drawableStart="@drawable/phone_bg"
             android:drawablePadding="12dp"
             android:hint="@string/phone"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -81,10 +86,13 @@
             android:hint="@string/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/pass_bg"
+            android:drawableStart="@drawable/pass_bg"
             android:drawablePadding="12dp"
             android:padding="15dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -96,10 +104,13 @@
             android:hint="@string/confirmpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/pass_bg"
+            android:drawableStart="@drawable/pass_bg"
             android:drawablePadding="12dp"
             android:padding="15dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
@@ -113,8 +124,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
         android:background="@drawable/btn_bg"
         android:text="@string/register"
         android:textColor="@color/white" />
@@ -127,9 +138,10 @@
         android:layout_marginTop="60dp">
 
         <TextView
+            android:id="@+id/already"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account?"
+            android:text="@string/already"
             android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"

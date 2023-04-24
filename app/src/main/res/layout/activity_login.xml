@@ -13,46 +13,49 @@
         android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Yey, you\'re back\!"
+        android:text="@string/back"
         android:textColor="#622D9A"
         android:layout_marginTop="160dp"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let us do it for you, while you also build your wealth and put your money to work, effortlessly."
+        android:text="@string/text"
         android:textColor="#A2A2A2"
-        android:textSize="14dp" />
+        android:textSize="14sp"
+        android:layout_marginStart="10dp" />
 
     <TextView
-        android:text="@string/login"
+        android:id="@+id/log"
+        android:text="@string/log"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textColor="#622D9A"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@string/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone"
-            android:hint="@string/phone"
+            android:id="@+id/email"
+            android:hint="@string/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/phone_bg"
+            android:drawableStart="@drawable/phone_bg"
             android:drawablePadding="12dp"
             android:padding="15dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,9 +66,12 @@
             android:hint="@string/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/pass_bg"
+            android:drawableStart="@drawable/pass_bg"
             android:drawablePadding="12dp"
-            android:padding="15dp"/>
+            android:padding="15dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
@@ -93,9 +99,10 @@
         android:layout_marginTop="80dp">
 
         <TextView
+            android:id="@+id/dont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account?"
+            android:text="@string/dont"
             android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
