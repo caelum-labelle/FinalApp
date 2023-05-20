@@ -38,4 +38,12 @@
     <string name="text2">Empower your financial future with knowledge and investment, all in one place.</string>
     <string name="already">Already have an account?</string>
     <string name="log">Login</string>
+    <string name="referral">Referral</string>
+    <string name="payment">Payment Methods</string>
+    <string name="security">Security</string>
+    <string name="card">Gift Cards</string>
+    <string name="gifts">My Gifts</string>
+    <string name="help">Help and Support</string>
+    <string name="share">Share the app</string>
+    <string name="news">News</string>
 </resources>

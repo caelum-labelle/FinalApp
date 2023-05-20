@@ -1,16 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExploreFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/explore_fragment"
-        android:textSize="26sp"
-        android:layout_gravity="center"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif"
+                android:text="Investauniversity"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="#622D9A"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+            <LinearLayout
+                android:id="@+id/layout_lesson_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_flashcards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:animateLayoutChanges="true"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="8dp"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/topic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Learn the Basics: Technical Analysis"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="22sp"/>
+
+                                <TextView
+                                    android:id="@+id/secondary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Understanding fundamentals is a must as this is the cornerstone of any investment."
+                                    android:textAppearance="?attr/textAppearanceBody2"
+                                    android:textColor="?android:attr/textColorSecondary" />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/expand_card"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:src="@drawable/expand_more" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cardop_lesson1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="4dp"
+                                android:visibility="visible" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_pref_themes"
+                                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAllCaps="false"
+                                android:text="How to read stock charts?"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp"
+                                app:icon="@drawable/circle_check"
+                                app:iconSize="24dp"
+                                app:iconPadding="8dp"/>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_pref_achievements"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAllCaps="false"
+                                android:text="Candlesticks"
+                                android:textAlignment="textStart"
+                                android:enabled="false"
+                                app:icon="@drawable/circle_curretn"
+                                android:textSize="16sp"
+                                app:iconSize="24dp"
+                                app:iconPadding="8dp"/>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_pref_notifications"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAllCaps="false"
+                                android:text="Support and Resistance"
+                                android:textAlignment="textStart"
+                                android:enabled="false"
+                                android:textSize="16sp"
+                                app:iconSize="24dp"
+                                app:iconPadding="8dp"/>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.chip.ChipGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingTop="4dp"
+                                        app:singleLine="true">
+
+                                        <com.google.android.material.chip.Chip
+                                            android:id="@+id/chip_case_markers"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Case Markers"
+                                            android:enabled="false"
+                                            app:chipIcon="@drawable/table"
+                                            app:chipStartPadding="6dp"
+                                            app:textStartPadding="6dp" />
+
+                                        <com.google.android.material.chip.Chip
+                                            android:id="@+id/chip_personal_pronouns"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Personal Pronouns"
+                                            app:chipIcon="@drawable/table"
+                                            app:chipStartPadding="6dp"
+                                            app:textStartPadding="6dp" />
+
+                                        <com.google.android.material.chip.Chip
+                                            android:id="@+id/chip_demonstrative_pronouns"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Demonstrative Pronouns"
+                                            app:chipIcon="@drawable/table"
+                                            app:chipStartPadding="6dp"
+                                            app:textStartPadding="6dp" />
+
+                                        <!--                                    app:chipIconTint="@color/icon_tint"-->
+
+                                    </com.google.android.material.chip.ChipGroup>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/pb_lesson1"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progress="25"
+                            android:progressTint="?attr/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

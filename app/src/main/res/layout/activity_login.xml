@@ -13,12 +13,12 @@
         android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="130dp"
         android:text="@string/back"
         android:textColor="#622D9A"
-        android:layout_marginTop="130dp"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_marginStart="10dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text"

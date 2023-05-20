@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LearnPage extends AppCompatActivity {
+public class LessonPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

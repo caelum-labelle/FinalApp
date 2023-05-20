@@ -71,15 +71,16 @@ public class Register extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()) {
                                 Toast.makeText(Register.this, "Account created successfuly.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Register.this, HomePage.class);
+                                Intent intent = new Intent(Register.this, HomeFragment.class);
                                 startActivity(intent);
+                                finish();
                             } else {
                                 Toast.makeText(Register.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                     /*
-                    databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    databaseRrence.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             //check if phone is not register before
@@ -107,6 +108,8 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
+
+
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

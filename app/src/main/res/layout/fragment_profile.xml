@@ -1,16 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfilePage">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile_fragment"
-        android:textSize="26sp"
-        android:layout_gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-</FrameLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/prof"
+                    tools:layout_editor_absoluteY="66dp" />
+
+                <TextView
+                    android:id="@+id/un"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Caelum"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/prof"
+                    app:layout_constraintStart_toStartOf="@id/prof"
+                    app:layout_constraintTop_toBottomOf="@+id/prof" />
+
+                <TextView
+                    android:id="@+id/idd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID: 202469345"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/un"
+                    app:layout_constraintStart_toStartOf="@+id/un"
+                    app:layout_constraintTop_toBottomOf="@+id/un" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/idd"
+                    android:gravity="left">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/referral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/profbtn"
+                        android:drawableLeft="@drawable/referral"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical|start"
+                        android:padding="15dp"
+                        android:text="@string/referral"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news"
+                        android:background="@drawable/profbtn"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawableLeft="@drawable/news"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="20dp"
+                        android:gravity="center_vertical|start"
+                        android:layout_gravity="start"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment"
+                        android:background="@drawable/profbtn"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawableLeft="@drawable/pay"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical|start"
+                        android:layout_gravity="start"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/secu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/security"
+                        android:background="@drawable/profbtn"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawableLeft="@drawable/secu"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical|start"
+                        android:layout_gravity="start"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/profbtn"
+                        android:drawableLeft="@drawable/card"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical|start"
+                        android:text="@string/card"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/gifts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gifts"
+                        android:background="@drawable/profbtn"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawableLeft="@drawable/gift"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical|start"
+                        android:layout_gravity="start"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/help"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/help"
+                        android:background="@drawable/profbtn"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawableLeft="@drawable/help"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical|start"
+                        android:layout_gravity="start"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/share"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/share"
+                        android:background="@drawable/profbtn"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="50dp"
+                        android:drawableLeft="@drawable/share"
+                        android:drawableRight="@drawable/arrowfor"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical|start"
+                        android:layout_gravity="start"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

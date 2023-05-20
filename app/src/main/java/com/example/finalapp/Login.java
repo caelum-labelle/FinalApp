@@ -53,6 +53,8 @@ public class Login extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Toast.makeText(Login.this, "Success", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Login.this, HomePage.class);
+                            intent.putExtra("fragmentToLoad", "HomeFragment"); // Pass the desired fragment identifier
+                            startActivity(intent);
                             startActivity(intent);
                         } else {
                             Toast.makeText(Login.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
@@ -68,5 +70,6 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this, Register.class));
             }
         });
+
     }
 }
