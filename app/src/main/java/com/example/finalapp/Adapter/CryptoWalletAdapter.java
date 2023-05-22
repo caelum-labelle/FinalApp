@@ -39,7 +39,7 @@ public class CryptoWalletAdapter extends RecyclerView.Adapter<CryptoWalletAdapte
         holder.cryptoPriceTxt.setText(formatter.format(cryptoWallets.get(position).getCryptoPrice()));
         holder.changePercentTxt.setText(cryptoWallets.get(position).getChangePercent()+"%");
         holder.propertySizeTxt.setText(cryptoWallets.get(position).getPropertySize()+cryptoWallets.get(position).getCryptoSymbol());
-        holder.propertyAmountTxt.setText("$"+formatter.format(cryptoWallets.get(position).getPropertyAmount()));
+        holder.propertyAmountTxt.setText("₱"+formatter.format(cryptoWallets.get(position).getPropertyAmount()));
 
         if (cryptoWallets.get(position).getChangePercent()>0) {
             holder.changePercentTxt.setTextColor(Color.parseColor("#12c737"));
@@ -75,3 +75,5 @@ public class CryptoWalletAdapter extends RecyclerView.Adapter<CryptoWalletAdapte
         }
     }
 }
+
+

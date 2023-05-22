@@ -315,6 +315,7 @@
                             android:background="#E4DBF4"
                             android:text="Favorites"
                             android:textAlignment="center"
+                            android:textColor="#673AB7"
                             tools:layout_editor_absoluteX="21dp"
                             tools:layout_editor_absoluteY="0dp" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -336,6 +337,7 @@
                             android:id="@+id/textView15"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#673AB7"
                             android:text="Hot"
                             android:textAlignment="center" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -356,6 +358,7 @@
                             android:id="@+id/textView16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#673AB7"
                             android:text="New Listings"
                             android:textAlignment="center" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -376,6 +379,7 @@
                             android:id="@+id/textView17"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#673AB7"
                             android:text="Gained"
                             android:textAlignment="center" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -398,7 +402,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        app:layout_constraintStart_toStartOf="parent">
 
                         <TextView
                             android:id="@+id/tv"
@@ -406,6 +411,7 @@
                             android:layout_height="wrap_content"
                             android:text="Name"
                             android:textAlignment="center"
+                            android:textColor="#000000"
                             android:textSize="10sp"
                             tools:layout_editor_absoluteX="21dp"
                             tools:layout_editor_absoluteY="0dp" />
@@ -428,6 +434,7 @@
                             android:id="@+id/tvv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#000000"
                             android:text="Last Price"
                             android:textAlignment="center"
                             android:textSize="10sp" />
@@ -449,6 +456,7 @@
                             android:id="@+id/tvvvv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#000000"
                             android:text="24 Ch"
                             android:textAlignment="center"
                             android:textSize="10sp" />
@@ -484,6 +492,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="BTC"
                                 android:textAlignment="center"
+                                android:textColor="#000000"
                                 android:textSize="20sp"
                                 tools:layout_editor_absoluteX="21dp"
                                 tools:layout_editor_absoluteY="0dp" />
@@ -506,6 +515,7 @@
                                 android:id="@+id/tv1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="323.543"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -527,6 +537,7 @@
                                 android:id="@+id/tv2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="+1.23"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -562,6 +573,7 @@
                                 android:id="@+id/tv3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="ETH"
                                 android:textAlignment="center"
                                 android:textSize="20sp"
@@ -586,6 +598,7 @@
                                 android:id="@+id/tv4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="109.23"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -607,6 +620,7 @@
                                 android:id="@+id/tv5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="+1.23"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -642,6 +656,7 @@
                                 android:id="@+id/tt1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="ETH"
                                 android:textAlignment="center"
                                 android:textSize="20sp"
@@ -666,6 +681,7 @@
                                 android:id="@+id/tv6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="657.65"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -687,6 +703,7 @@
                                 android:id="@+id/tt2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="+1.23"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -722,6 +739,7 @@
                                 android:id="@+id/tt3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="CPH"
                                 android:textAlignment="center"
                                 android:textSize="20sp"
@@ -746,6 +764,7 @@
                                 android:id="@+id/ttt4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="433.233"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -767,6 +786,7 @@
                                 android:id="@+id/tt5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="+1.23"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -802,6 +822,7 @@
                                 android:id="@+id/tt6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="YHT"
                                 android:textAlignment="center"
                                 android:textSize="20sp"
@@ -826,6 +847,7 @@
                                 android:id="@+id/tt7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="65.54"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -847,6 +869,7 @@
                                 android:id="@+id/tt8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="#000000"
                                 android:text="+1.23"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
