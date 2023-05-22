@@ -45,6 +45,7 @@
     <string name="gifts">My Gifts</string>
     <string name="help">Help and Support</string>
     <string name="share">Share the app</string>
-    <string name="news">News</string>
+    <string name="news">Trading News</string>
     <string name="title_activity_explore2">Explore2</string>
+    <string name="log_out">Log out</string>
 </resources>
