@@ -311,14 +311,18 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/favtxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="30dp"
                             android:background="#E4DBF4"
                             android:text="Favorites"
                             android:textAlignment="center"
-                            tools:layout_editor_absoluteX="21dp"
-                            tools:layout_editor_absoluteY="0dp" />
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -335,11 +339,16 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/hottxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="21dp"
                             android:text="Hot"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
@@ -355,11 +364,16 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/newlistingstxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
                             android:text="New Listings"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
@@ -375,11 +389,16 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView17"
+                            android:id="@+id/gainedtxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="12dp"
                             android:text="Gained"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
@@ -403,14 +422,17 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:id="@+id/lower_NameTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="24dp"
                             android:text="Name"
                             android:textAlignment="center"
                             android:textSize="10sp"
-                            tools:layout_editor_absoluteX="21dp"
-                            tools:layout_editor_absoluteY="0dp" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -427,7 +449,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/h2txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Last Price"
@@ -448,7 +470,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView20"
+                            android:id="@+id/num2txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="24 Ch"
@@ -481,8 +503,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/btctxt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="BTC"
                                 android:textAlignment="center"
@@ -505,8 +527,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/h3txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="323.543"
                                 android:textAlignment="center"
@@ -526,8 +548,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/num3txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
                                 android:textAlignment="center"
@@ -561,8 +583,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/ethtxt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="ETH"
                                 android:textAlignment="center"
@@ -585,8 +607,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/h4txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="109.23"
                                 android:textAlignment="center"
@@ -606,8 +628,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/n"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
                                 android:textAlignment="center"
@@ -641,8 +663,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/etctxt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="ETH"
                                 android:textAlignment="center"
@@ -665,8 +687,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/h5txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="657.65"
                                 android:textAlignment="center"
@@ -686,8 +708,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/um4txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
                                 android:textAlignment="center"
@@ -721,8 +743,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/cphtxt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="CPH"
                                 android:textAlignment="center"
@@ -745,8 +767,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/h8txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="433.233"
                                 android:textAlignment="center"
@@ -766,8 +788,8 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/num5txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
                                 android:textAlignment="center"
@@ -801,13 +823,14 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/yhttxt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="21dp"
                                 android:text="YHT"
                                 android:textAlignment="center"
                                 android:textSize="20sp"
-                                tools:layout_editor_absoluteX="21dp"
+                                app:layout_constraintStart_toStartOf="parent"
                                 tools:layout_editor_absoluteY="0dp" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -825,12 +848,16 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/h1txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="56dp"
                                 android:text="65.54"
                                 android:textAlignment="center"
-                                android:textSize="20sp" />
+                                android:textSize="20sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
 
@@ -846,12 +873,16 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/num1txt"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
                                 android:text="+1.23"
                                 android:textAlignment="center"
-                                android:textSize="20sp" />
+                                android:textSize="20sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
 
