@@ -28,7 +28,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/prof" />
+                    app:srcCompat="@drawable/prof"/>
 
                 <TextView
                     android:id="@+id/un"
@@ -36,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Caelum"
+                    android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@id/prof"
@@ -47,6 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ID: 202469345"
+                    android:textColor="@color/black"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="@+id/un"
                     app:layout_constraintStart_toStartOf="@+id/un"
@@ -65,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="50dp"
                         android:layout_marginEnd="32dp"
                         android:layout_marginBottom="7dp"
                         android:background="@drawable/profbtn"
@@ -76,24 +78,6 @@
                         android:gravity="center_vertical|start"
                         android:padding="15dp"
                         android:text="@string/referral"
-                        android:textAllCaps="false"
-                        android:textSize="18sp" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/news"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/news"
-                        android:background="@drawable/profbtn"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginEnd="32dp"
-                        android:layout_marginBottom="7dp"
-                        android:drawableLeft="@drawable/news1"
-                        android:drawableRight="@drawable/arrowfor"
-                        android:drawablePadding="20dp"
-                        android:gravity="center_vertical|start"
-                        android:layout_gravity="start"
-                        android:padding="15dp"
                         android:textAllCaps="false"
                         android:textSize="18sp" />
 
@@ -213,7 +197,7 @@
                         android:background="@drawable/profbtn"
                         android:layout_marginStart="32dp"
                         android:layout_marginEnd="32dp"
-                        android:layout_marginBottom="50dp"
+                        android:layout_marginBottom="100dp"
                         android:drawableLeft="@drawable/logout"
                         android:drawableRight="@drawable/arrowfor"
                         android:drawablePadding="15dp"

@@ -202,8 +202,7 @@
                                 app:layout_constraintHorizontal_bias="0.47"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.461"
-                                app:srcCompat="@drawable/pay" />
+                                app:layout_constraintVertical_bias="0.461" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
@@ -238,8 +237,7 @@
                                 app:layout_constraintHorizontal_bias="0.47"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.461"
-                                app:srcCompat="@drawable/news" />
+                                app:layout_constraintVertical_bias="0.461" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
@@ -403,7 +401,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:id="@+id/tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Name"
@@ -427,7 +425,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/tvv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Last Price"
@@ -448,7 +446,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/textView20"
+                            android:id="@+id/tvvvv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="24 Ch"
@@ -481,7 +479,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
+                                android:id="@+id/tvvvvv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="BTC"
@@ -505,7 +503,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
+                                android:id="@+id/tv1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="323.543"
@@ -526,7 +524,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/tv2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -561,7 +559,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
+                                android:id="@+id/tv3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ETH"
@@ -585,7 +583,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
+                                android:id="@+id/tv4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="109.23"
@@ -606,7 +604,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/tv5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -641,7 +639,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
+                                android:id="@+id/tt1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ETH"
@@ -665,7 +663,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
+                                android:id="@+id/tv6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="657.65"
@@ -686,7 +684,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/tt2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -721,7 +719,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
+                                android:id="@+id/tt3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="CPH"
@@ -745,7 +743,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
+                                android:id="@+id/ttt4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="433.233"
@@ -766,7 +764,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/tt5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -801,7 +799,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView18"
+                                android:id="@+id/tt6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="YHT"
@@ -825,7 +823,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView19"
+                                android:id="@+id/tt7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="65.54"
@@ -846,7 +844,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/tt8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
