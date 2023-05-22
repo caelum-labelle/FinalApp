@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText phone = findViewById(R.id.phone);
+        final EditText phone = findViewById(R.id.email);
         final EditText password = findViewById(R.id.pass);
         final Button login = findViewById(R.id.login);
         final TextView signup = findViewById(R.id.signup);
@@ -54,7 +54,6 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "Success", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Login.this, HomePage.class);
                             intent.putExtra("fragmentToLoad", "HomeFragment"); // Pass the desired fragment identifier
-                            startActivity(intent);
                             startActivity(intent);
                         } else {
                             Toast.makeText(Login.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();

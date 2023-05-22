@@ -16,37 +16,43 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage extends AppCompatActivity {
 
-    ActivityMainBinding binding;
-
+    HomeFragment homeFragment = new HomeFragment();
+    ExploreFragment exploreFragment = new ExploreFragment();
+    SocialFragment socialFragment = new SocialFragment();
+    PortfolioFragment portfolioFragment = new PortfolioFragment();
+    ProfileFragment profileFragment = new ProfileFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_home_page);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView);
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
-            @SuppressLint("NonConstantResourceId")
+        changeFragment(homeFragment);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-                Intent intent;
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
+                        changeFragment(homeFragment);
                         break;
                     case R.id.explore:
-                        intent = new Intent(HomePage.this, ExploreFragment.class);
+                        changeFragment(exploreFragment);
                         break;
                     case R.id.social:
-                        intent = new Intent(HomePage.this, SocialFragment.class);
+                        changeFragment(socialFragment);
                         break;
                     case R.id.portfolio:
-                        intent = new Intent(HomePage.this, PortfolioFragment.class);
+                        changeFragment(portfolioFragment);
                         break;
                     case R.id.profile:
-                        intent = new Intent(HomePage.this, ProfileFragment.class);
+                        changeFragment(profileFragment);
                         break;
                 }
+                return true;
             }
         });
+    }
 
+    public void changeFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,fragment).commit();
     }
 }

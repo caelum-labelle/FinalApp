@@ -1,263 +1,1029 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExploreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
+        <TextView
+            android:id="@+id/insights"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Market insights"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
 
-            <TextView
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="sans-serif"
-                android:text="Investauniversity"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textColor="#622D9A"
-                android:textSize="24sp" />
-
-        </RelativeLayout>
-
-        <View
-            android:id="@+id/divider"
+        <TextView
+            android:id="@+id/tnews"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Trading news"
+            android:textColor="#000000"
+            android:drawableRight="@drawable/arrowfor"
+            android:textSize="20sp"/>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/layout_lesson_tab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
+                android:orientation="horizontal" >
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/card_flashcards"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:animateLayoutChanges="true"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="8dp"
-                    app:contentPadding="16dp">
+                    android:id="@+id/first"
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-
+                        android:orientation="vertical" >
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:paddingBottom="4dp">
-
+                            android:paddingBottom="4dp" >
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="7"
-                                android:orientation="vertical">
+                                android:orientation="vertical" >
 
                                 <TextView
-                                    android:id="@+id/topic"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Learn the Basics: Technical Analysis"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="XAUUSD is possibly bearish"
                                     android:textAppearance="?attr/textAppearanceHeadline6"
-                                    android:textSize="22sp"/>
+                                    android:textSize="20sp" />
 
                                 <TextView
-                                    android:id="@+id/secondary"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="Understanding fundamentals is a must as this is the cornerstone of any investment."
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    android:textColor="?android:attr/textColorSecondary" />
+                                    android:text="There is a selling opportunity for intraday traders."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
 
-
-                            </LinearLayout>
-
-                            <ImageView
-                                android:id="@+id/expand_card"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/expand_more" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/cardop_lesson1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <com.google.android.material.divider.MaterialDivider
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="4dp"
-                                android:visibility="visible" />
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_pref_themes"
-                                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:textAllCaps="false"
-                                android:text="How to read stock charts?"
-                                android:textAlignment="textStart"
-                                android:textSize="16sp"
-                                app:icon="@drawable/circle_check"
-                                app:iconSize="24dp"
-                                app:iconPadding="8dp"/>
-
-                            <com.google.android.material.divider.MaterialDivider
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:visibility="visible" />
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_pref_achievements"
-                                style="@style/Widget.MaterialComponents.Button.TextButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:textAllCaps="false"
-                                android:text="Candlesticks"
-                                android:textAlignment="textStart"
-                                android:enabled="false"
-                                app:icon="@drawable/circle_curretn"
-                                android:textSize="16sp"
-                                app:iconSize="24dp"
-                                app:iconPadding="8dp"/>
-
-                            <com.google.android.material.divider.MaterialDivider
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:visibility="visible" />
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_pref_notifications"
-                                style="@style/Widget.MaterialComponents.Button.TextButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:textAllCaps="false"
-                                android:text="Support and Resistance"
-                                android:textAlignment="textStart"
-                                android:enabled="false"
-                                android:textSize="16sp"
-                                app:iconSize="24dp"
-                                app:iconPadding="8dp"/>
-
-                            <com.google.android.material.divider.MaterialDivider
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:visibility="visible" />
-
-                            <HorizontalScrollView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scrollbars="none">
-
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <com.google.android.material.chip.ChipGroup
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:paddingTop="4dp"
-                                        app:singleLine="true">
-
-                                        <com.google.android.material.chip.Chip
-                                            android:id="@+id/chip_case_markers"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Case Markers"
-                                            android:enabled="false"
-                                            app:chipIcon="@drawable/table"
-                                            app:chipStartPadding="6dp"
-                                            app:textStartPadding="6dp" />
-
-                                        <com.google.android.material.chip.Chip
-                                            android:id="@+id/chip_personal_pronouns"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Personal Pronouns"
-                                            app:chipIcon="@drawable/table"
-                                            app:chipStartPadding="6dp"
-                                            app:textStartPadding="6dp" />
-
-                                        <com.google.android.material.chip.Chip
-                                            android:id="@+id/chip_demonstrative_pronouns"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Demonstrative Pronouns"
-                                            app:chipIcon="@drawable/table"
-                                            app:chipStartPadding="6dp"
-                                            app:textStartPadding="6dp" />
-
-                                        <!--                                    app:chipIconTint="@color/icon_tint"-->
-
-                                    </com.google.android.material.chip.ChipGroup>
-                                </LinearLayout>
-                            </HorizontalScrollView>
-
-
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
                         </LinearLayout>
-
-                        <ProgressBar
-                            android:id="@+id/pb_lesson1"
-                            style="?android:attr/progressBarStyleHorizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:progress="25"
-                            android:progressTint="?attr/colorPrimary"/>
 
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/se"
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="EURUSD seeems bearish"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Analysts see a selling opppurtunity for intraday traders."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/thi"
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="USDJPY may correct downwards"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="A short-term sell trade is possible."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fo"
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="USDCAD is possible bearish"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="There is a selling opportunity for intraday traders."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fif"
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="GBPUSD may correct upwards"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="A short term buy trade is possible"
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sx"
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="EURUSD may correct updwards"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="A short-term buy trade is possible."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
             </LinearLayout>
-        </ScrollView>
+        </HorizontalScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Technical analysis"
+            android:textColor="#000000"
+            android:drawableRight="@drawable/arrowfor"
+            android:textSize="20sp"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fi"
+                    android:layout_width="300dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/logo">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="Bulls continue to drive USD..."
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Find out how to choose your short-term trading strategy."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sec"
+                    android:layout_width="300dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/logo">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="Bears continue to bring XA..."
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="The technical setup offers some trading oppurtunities.."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/t3"
+                    android:layout_width="300dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/logo">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="BTCUSD is in a flat market"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Learn more about possible trading scenarios."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/f4"
+                    android:layout_width="300dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/logo">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="The GBPJPY trend remains..."
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Learn more about possible trading scenarios."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/f5"
+                    android:layout_width="300dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/logo">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="EURUSD is in a downtrend"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Find out how to choose your short-term trading strategy."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/s6"
+                    android:layout_width="300dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="200dp"
+                                    app:srcCompat="@drawable/logo">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="Bears continue to bring A..."
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Learn more about possible trading scenarios."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/strat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Trading strategies"
+            android:textColor="#000000"
+            android:drawableRight="@drawable/arrowfor"
+            android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fff"
+                    android:layout_width="375dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="XAUUSD is possibly bearish"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="There is a selling opportunity for intraday traders."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sese"
+                    android:layout_width="375dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="EURUSD seeems bearish"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Analysts see a selling opppurtunity for intraday traders."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/thirrrr"
+                    android:layout_width="375dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp" >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="USDJPY may correct downwards"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="A short-term sell trade is possible."
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="READ MORE"
+                                    android:textColor="@color/flutter_sky" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/morestrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="MORE STRATEGIES"
+                    android:textColor="#622D9A"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+    </LinearLayout>
 
 
-</FrameLayout>
+</ScrollView>

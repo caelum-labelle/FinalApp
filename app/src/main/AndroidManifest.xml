@@ -14,6 +14,17 @@
         android:theme="@style/Theme.FinalApp"
         tools:targetApi="31">
         <activity
+            android:name=".Explore3"
+            android:exported="false" />
+        <activity
+            android:name=".Explore2"
+            android:exported="false"
+            android:label="@string/title_activity_explore2"
+            android:theme="@style/Theme.FinalApp.NoActionBar" />
+        <activity
+            android:name=".NewsPage"
+            android:exported="false" />
+        <activity
             android:name=".AddPostPage"
             android:exported="false" />
         <activity
@@ -29,18 +40,7 @@
             android:name=".HomePage"
             android:exported="false" />
         <activity
-            android:name=".SocialPage"
-            android:exported="false"
-            android:label="@string/title_activity_social_page"
-            android:theme="@style/Theme.FinalApp.NoActionBar" />
-        <activity
-            android:name=".ExplorePage"
-            android:exported="false" />
-        <activity
             android:name=".LessonPage"
-            android:exported="false" />
-        <activity
-            android:name=".ProfilePage"
             android:exported="false" />
         <activity
             android:name=".Register"
