@@ -403,7 +403,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/nme"
+                            android:id="@+id/textView18"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Name"
@@ -427,7 +427,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/prce"
+                            android:id="@+id/textView19"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Last Price"
@@ -448,7 +448,7 @@
                         android:layout_gravity="center">
 
                         <TextView
-                            android:id="@+id/chhh"
+                            android:id="@+id/textView20"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="24 Ch"
@@ -481,7 +481,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tv18"
+                                android:id="@+id/textView18"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="BTC"
@@ -505,7 +505,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tv19"
+                                android:id="@+id/textView19"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="323.543"
@@ -526,7 +526,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tv20"
+                                android:id="@+id/textView20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -561,7 +561,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tt18"
+                                android:id="@+id/textView18"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ETH"
@@ -585,7 +585,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tt19"
+                                android:id="@+id/textView19"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="109.23"
@@ -606,7 +606,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tt20"
+                                android:id="@+id/textView20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -641,7 +641,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/ttt18"
+                                android:id="@+id/textView18"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ETH"
@@ -665,7 +665,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/ttt19"
+                                android:id="@+id/textView19"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="657.65"
@@ -686,7 +686,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/ttt20"
+                                android:id="@+id/textView20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -721,7 +721,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/t18"
+                                android:id="@+id/textView18"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="CPH"
@@ -745,7 +745,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/t19"
+                                android:id="@+id/textView19"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="433.233"
@@ -766,7 +766,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/t10"
+                                android:id="@+id/textView20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
@@ -801,7 +801,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tw18"
+                                android:id="@+id/textView18"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="YHT"
@@ -825,7 +825,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tw19"
+                                android:id="@+id/textView19"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="65.54"
@@ -846,7 +846,7 @@
                             android:layout_gravity="center">
 
                             <TextView
-                                android:id="@+id/tw20"
+                                android:id="@+id/textView20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="+1.23"
