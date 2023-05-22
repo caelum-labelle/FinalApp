@@ -202,7 +202,8 @@
                                 app:layout_constraintHorizontal_bias="0.47"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.461" />
+                                app:layout_constraintVertical_bias="0.461"
+                                app:srcCompat="@drawable/pay"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
@@ -237,7 +238,8 @@
                                 app:layout_constraintHorizontal_bias="0.47"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.461" />
+                                app:layout_constraintVertical_bias="0.461"
+                                app:srcCompat="@drawable/news"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
