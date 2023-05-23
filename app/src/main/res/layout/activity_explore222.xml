@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Explore2">
+    tools:context=".Explore222">
 
     <TextView
         android:id="@+id/textView"
@@ -13,51 +13,49 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Trading news"
+        android:text="Trading strategies"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="70dp"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/f"
+                android:id="@+id/f111"
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="13dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="4dp">
-
+                        android:paddingBottom="4dp" >
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="7"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="20dp"
+                                android:layout_marginStart="15dp"
                                 android:layout_marginEnd="10dp"
                                 android:text="XAUUSD is possibly bearish"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
@@ -66,12 +64,12 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="4dp"
-                                android:layout_marginEnd="10dp"
                                 android:text="There is a selling opportunity for intraday traders."
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="14sp" />
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -90,35 +88,33 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/s1"
+                android:id="@+id/kkk"
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="13dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="4dp">
-
+                        android:paddingBottom="4dp" >
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="7"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="20dp"
+                                android:layout_marginStart="15dp"
                                 android:layout_marginEnd="10dp"
                                 android:text="EURUSD seeems bearish"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
@@ -127,12 +123,12 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="4dp"
-                                android:layout_marginEnd="10dp"
                                 android:text="Analysts see a selling opppurtunity for intraday traders."
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="14sp" />
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -147,52 +143,51 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/ss1"
+                android:id="@+id/klkl"
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="13dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="4dp">
-
+                        android:paddingBottom="4dp" >
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="7"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="20dp"
+                                android:layout_marginStart="15dp"
                                 android:layout_marginEnd="10dp"
-                                android:text="EURUSD seeems bearish"
+                                android:text="USDJPY may correct downwards"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 android:textSize="20sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="4dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="Analysts see a selling opppurtunity for intraday traders."
+                                android:text="A short-term sell trade is possible."
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="14sp" />
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -207,52 +202,51 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/ssss"
+                android:id="@+id/kll"
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="13dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="4dp">
-
+                        android:paddingBottom="4dp" >
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="7"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="20dp"
+                                android:layout_marginStart="15dp"
                                 android:layout_marginEnd="10dp"
-                                android:text="EURUSD seeems bearish"
+                                android:text="XAUUSD is possibly bearish"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 android:textSize="20sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="4dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="Analysts see a selling opppurtunity for intraday traders."
+                                android:text="There is a selling opportunity for intraday traders."
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="14sp" />
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -267,38 +261,37 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/s11"
+                android:id="@+id/sese"
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="13dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="4dp">
-
+                        android:paddingBottom="4dp" >
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="7"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="20dp"
+                                android:layout_marginStart="15dp"
                                 android:layout_marginEnd="10dp"
                                 android:text="EURUSD seeems bearish"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
@@ -307,12 +300,12 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="4dp"
-                                android:layout_marginEnd="10dp"
                                 android:text="Analysts see a selling opppurtunity for intraday traders."
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="14sp" />
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -327,52 +320,51 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/sss111"
+                android:id="@+id/kkkllk"
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="13dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical" >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="4dp">
-
+                        android:paddingBottom="4dp" >
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="7"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="20dp"
+                                android:layout_marginStart="15dp"
                                 android:layout_marginEnd="10dp"
-                                android:text="EURUSD seeems bearish"
+                                android:text="USDJPY may correct downwards"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 android:textSize="20sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
                                 android:layout_marginTop="4dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="Analysts see a selling opppurtunity for intraday traders."
+                                android:text="A short-term sell trade is possible."
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="14sp" />
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:textSize="14sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -387,9 +379,18 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="100dp"
+                android:textSize="14sp" />
 
         </LinearLayout>
-
     </ScrollView>
 </RelativeLayout>

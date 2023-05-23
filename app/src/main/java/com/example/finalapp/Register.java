@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -38,7 +39,7 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         FirebaseAuth mauth = FirebaseAuth.getInstance();
         final EditText email = findViewById(R.id.email);
-        final EditText phone = findViewById(R.id.phone);
+        final EditText username = findViewById(R.id.username);
         final EditText password = findViewById(R.id.password);
         final EditText confirmpass = findViewById(R.id.confirmpass);
 
@@ -51,12 +52,12 @@ public class Register extends AppCompatActivity {
 
                 //get data from EditTexts into String values
                 final String emailTxt = email.getText().toString();
-                final String phoneTxt = phone.getText().toString();
+                final String usernameTxt = username.getText().toString();
                 final String passTxt = password.getText().toString();
                 final String conTxt = confirmpass.getText().toString();
 
                 //check if user fill all the fields before sending data to firebase
-                if (emailTxt.isEmpty() || phoneTxt.isEmpty() || passTxt.isEmpty()) {
+                if (emailTxt.isEmpty() || usernameTxt.isEmpty() || passTxt.isEmpty()) {
                     Toast.makeText(Register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 }
 
@@ -70,41 +71,23 @@ public class Register extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()) {
+                                // Save the username in SharedPreferences
+                                SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("username", usernameTxt);
+                                editor.apply();
+
+
                                 Toast.makeText(Register.this, "Account created successfuly.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Register.this, HomeFragment.class);
+                                Intent intent = new Intent(Register.this, HomePage.class);
+                                intent.putExtra("fragmentToLoad", "HomeFragment"); // Pass the desired fragment identifier
                                 startActivity(intent);
-                                finish();
                             } else {
                                 Toast.makeText(Register.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-                    /*
-                    databaseRrence.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            //check if phone is not register before
-                            if (snapshot.hasChild(phoneTxt)) {
-                                Toast.makeText(Register.this, "Phone is registere already", Toast.LENGTH_SHORT).show();
-                            }
-                            else {
-                                //sending data to firebase Realtime Database
-                                //we are using phone number as unique identity of every user
-                                databaseReference.child("users").child(phoneTxt).child("username").setValue(usernameTxt);
-                                databaseReference.child("users").child(phoneTxt).child("password").setValue(passTxt);
 
-
-                                Toast.makeText(Register.this, "User registered successfully.", Toast.LENGTH_SHORT).show();
-                                finish();
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-                    */
                 }
             }
         });

@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText phone = findViewById(R.id.email);
+        final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.pass);
         final Button login = findViewById(R.id.login);
         final TextView signup = findViewById(R.id.signup);
@@ -41,13 +41,13 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                //progressBar.setVisibility(View.VISIBLE);
-                final String phoneTxt = phone.getText().toString();
+                final String emailTxt = email.getText().toString();
                 final String passwordTxt = password.getText().toString();
 
-                if (phoneTxt.isEmpty() || passwordTxt.isEmpty()) {
-                    Toast.makeText(Login.this, "Please enter your mobile or password", Toast.LENGTH_SHORT).show();
+                if (emailTxt.isEmpty() || passwordTxt.isEmpty()) {
+                    Toast.makeText(Login.this, "Please enter your email or password", Toast.LENGTH_SHORT).show();
                 } FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                mAuth.signInWithEmailAndPassword(phoneTxt, passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.signInWithEmailAndPassword(emailTxt, passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
