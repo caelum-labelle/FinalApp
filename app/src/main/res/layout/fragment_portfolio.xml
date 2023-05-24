@@ -156,12 +156,11 @@
                                 android:id="@+id/imageView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/add"
+                                android:src="@drawable/send"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/send" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -193,7 +192,7 @@
                                 android:id="@+id/imageView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/add"
+                                android:src="@drawable/receive"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -230,12 +229,12 @@
                                 android:id="@+id/imageView4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/add"
+                                android:src="@drawable/buy"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/buy" />
+                                 />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -264,7 +263,7 @@
                 android:layout_margin="16dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/view"
+                android:id="@+id/viewactivities"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade);
         logo.startAnimation(animation);
 
+        recyclerViewWallet();
+
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void recyclerViewWallet() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerView = findViewById(R.id.view);
+        recyclerView = findViewById(R.id.viewactivities);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         ArrayList<CryptoWallet> cryptoWalletArrayList = new ArrayList<>();
@@ -77,10 +79,11 @@ public class MainActivity extends AppCompatActivity {
         lineData3.add(1200);
         lineData3.add(1000);
         lineData3.add(1100);
+        lineData3.add(1500);
 
         cryptoWalletArrayList.add(new CryptoWallet("bitcoin", "BTX", 1234.12, 2.13,lineData,1234.12,0.12343));
-        cryptoWalletArrayList.add(new CryptoWallet("ethervive", "ETH", 3243.34, 5.33,lineData,4543.23,0.4543));
-        cryptoWalletArrayList.add(new CryptoWallet("trox", "ROX", 1234.12, 2.13,lineData,1234.12,0.12343));
+        cryptoWalletArrayList.add(new CryptoWallet("ethereum", "ETH", 3243.34, -1.33,lineData2,4543.23,0.4543));
+        cryptoWalletArrayList.add(new CryptoWallet("trox", "ROX", 1234.12, 0.13,lineData3,1234.12,0.12343));
 
         adapter = new CryptoWalletAdapter(cryptoWalletArrayList);
         recyclerView.setAdapter(adapter);
