@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void recyclerViewWallet() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerView = findViewById(R.id.view);
+        recyclerView = findViewById(R.id.viewactivities);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         ArrayList<CryptoWallet> cryptoWalletArrayList = new ArrayList<>();
