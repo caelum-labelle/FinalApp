@@ -25,6 +25,7 @@ import android.widget.Toast;
 import static android.app.Activity.RESULT_OK;
 import static android.content.Context.MODE_PRIVATE;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.imageview.ShapeableImageView;
 
 public class ProfileFragment extends Fragment {
@@ -57,7 +58,8 @@ public class ProfileFragment extends Fragment {
         String imageUriString = preferences.getString("profileImageUri", null);
         if (imageUriString != null) {
             selectedImageUri = Uri.parse(imageUriString);
-            profileImageView.setImageURI(selectedImageUri);
+            //profileImageView.setImageURI(selectedImageUri);
+            Glide.with(this).load(selectedImageUri).into(profileImageView);
         }
 
         profileImageView.setOnClickListener(new View.OnClickListener() {

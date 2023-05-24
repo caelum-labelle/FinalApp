@@ -63,7 +63,7 @@ public class Register extends AppCompatActivity {
 
                 //if passwords are not matching with each other
                 else if (!passTxt.equals(conTxt)) {
-                    Toast.makeText(Register.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();

@@ -23,6 +23,8 @@ public class ExploreFragment extends Fragment {
     private TextView strat;
     private TextView morestrat;
     private MaterialCardView first;
+    private MaterialCardView fi;
+    private MaterialCardView fff;
 
 
     @Nullable
@@ -35,6 +37,8 @@ public class ExploreFragment extends Fragment {
         strat = view.findViewById(R.id.strat);
         morestrat = view.findViewById(R.id.morestrat);
         first = view.findViewById(R.id.first);
+        fi = view.findViewById(R.id.fi);
+        fff = view.findViewById(R.id.fff);
 
         tnews.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,10 +70,27 @@ public class ExploreFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Explore3.class);
+                startActivity(intent);
+            }
+        });
+
+        fi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Explore33.class);
+                startActivity(intent);
+            }
+        });
+
+        fff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Explore33.class);
                 startActivity(intent);
             }
         });

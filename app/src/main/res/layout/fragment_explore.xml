@@ -51,7 +51,7 @@
                     android:layout_marginTop="30dp"
                     android:drawableRight="@drawable/arrowfor"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Trading news"
+                    android:text="Market news"
                     android:textColor="#000000"
                     android:textSize="24sp" />
 
@@ -211,7 +211,7 @@
                                             android:layout_marginTop="20dp"
                                             android:layout_marginStart="15dp"
                                             android:layout_marginEnd="10dp"
-                                            android:text="USDJPY may correct downwards"
+                                            android:text="USDJPY may correct dow..."
                                             android:textAppearance="?attr/textAppearanceHeadline6"
                                             android:textSize="20sp" />
 
@@ -329,7 +329,7 @@
                                             android:layout_marginTop="20dp"
                                             android:layout_marginStart="15dp"
                                             android:layout_marginEnd="10dp"
-                                            android:text="GBPUSD may correct upwards"
+                                            android:text="GBPUSD may correct upwa..."
                                             android:textAppearance="?attr/textAppearanceHeadline6"
                                             android:textSize="20sp" />
 
@@ -388,7 +388,7 @@
                                             android:layout_marginTop="20dp"
                                             android:layout_marginStart="15dp"
                                             android:layout_marginEnd="10dp"
-                                            android:text="EURUSD may correct updwards"
+                                            android:text="EURUSD may correct upd..."
                                             android:textAppearance="?attr/textAppearanceHeadline6"
                                             android:textSize="20sp" />
 
@@ -446,7 +446,7 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/fi"
                             android:layout_width="300dp"
-                            android:layout_height="320dp"
+                            android:layout_height="220dp"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="10dp">
@@ -468,7 +468,7 @@
 
                                         <ImageView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="200dp"
+                                            android:layout_height="100dp"
                                             app:srcCompat="@drawable/logo">
                                         </ImageView>
 
@@ -511,7 +511,7 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/sec"
                             android:layout_width="300dp"
-                            android:layout_height="320dp"
+                            android:layout_height="220dp"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="10dp">
@@ -533,7 +533,7 @@
 
                                         <ImageView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="200dp"
+                                            android:layout_height="100dp"
                                             app:srcCompat="@drawable/logo">
                                         </ImageView>
 
@@ -576,7 +576,7 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/t3"
                             android:layout_width="300dp"
-                            android:layout_height="320dp"
+                            android:layout_height="220dp"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="10dp">
@@ -598,7 +598,7 @@
 
                                         <ImageView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="200dp"
+                                            android:layout_height="100dp"
                                             app:srcCompat="@drawable/logo">
                                         </ImageView>
 
@@ -641,7 +641,7 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/f4"
                             android:layout_width="300dp"
-                            android:layout_height="320dp"
+                            android:layout_height="220dp"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="10dp">
@@ -663,7 +663,7 @@
 
                                         <ImageView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="200dp"
+                                            android:layout_height="100dp"
                                             app:srcCompat="@drawable/logo">
                                         </ImageView>
 
@@ -706,7 +706,7 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/f5"
                             android:layout_width="300dp"
-                            android:layout_height="320dp"
+                            android:layout_height="220dp"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="10dp">
@@ -728,7 +728,7 @@
 
                                         <ImageView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="200dp"
+                                            android:layout_height="100dp"
                                             app:srcCompat="@drawable/logo">
                                         </ImageView>
 
@@ -771,7 +771,7 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/s6"
                             android:layout_width="300dp"
-                            android:layout_height="320dp"
+                            android:layout_height="220dp"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="10dp">
@@ -793,7 +793,7 @@
 
                                         <ImageView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="200dp"
+                                            android:layout_height="100dp"
                                             app:srcCompat="@drawable/logo">
                                         </ImageView>
 
