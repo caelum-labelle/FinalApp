@@ -58,7 +58,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="180dp"
-                    app:srcCompat="@drawable/logo"/>
+                    app:srcCompat="@drawable/ts1"/>
 
                 <TextView
                     android:layout_width="match_parent"
