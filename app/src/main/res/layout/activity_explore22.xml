@@ -57,7 +57,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="100dp"
-                                app:srcCompat="@drawable/logo"/>
+                                app:srcCompat="@drawable/ta1" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="100dp"
-                                app:srcCompat="@drawable/logo"></ImageView>
+                                app:srcCompat="@drawable/ta2"></ImageView>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -201,7 +201,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="100dp"
-                                app:srcCompat="@drawable/logo"></ImageView>
+                                app:srcCompat="@drawable/ta4"></ImageView>
 
                             <TextView
                                 android:layout_width="wrap_content"
