@@ -245,7 +245,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:background="#E4DBF4"
-                            android:text="Favorites"
+                            android:text="Hot"
                             android:textAlignment="center"
                             android:textColor="#673AB7"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -263,34 +263,6 @@
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/constraintLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
-                        app:layout_constraintStart_toEndOf="@+id/constraintLayout">
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="17dp"
-                            android:text="Hot"
-                            android:textAlignment="center"
-                            android:textColor="#673AB7"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center">
@@ -299,6 +271,7 @@
                             android:id="@+id/textView16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
                             android:text="New Listings"
                             android:textAlignment="center"
                             android:textColor="#673AB7"
