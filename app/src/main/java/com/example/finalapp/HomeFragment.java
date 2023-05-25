@@ -124,8 +124,8 @@ public class HomeFragment extends Fragment {
 //        fire.AddCrypto(new HomeCryptoData("Btc", "5454", "231",3));
 //        fire.AddCrypto(new HomeCryptoData("Tnc", "5454", "231",2));
 //        fire.AddCrypto(new HomeCryptoData("Flx", "5454", "231",1));
-        fire.AddCrypto(new HomeCryptoData("Ctd", "4354", "441",2));
-        fire.AddCrypto(new HomeCryptoData("Dts", "45432", "411",3));
+//        fire.AddCrypto(new HomeCryptoData("Ctd", "4354", "441",2));
+//        fire.AddCrypto(new HomeCryptoData("Dts", "45432", "411",3));
 //        mList.add(new HomeCryptoData("Mich", "None", "Sample"));
         DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://final-app-19fb2-default-rtdb.firebaseio.com/")
                 .getReference()
