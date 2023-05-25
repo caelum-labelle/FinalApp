@@ -475,7 +475,7 @@
                 android:layout_height="310dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/MainRecyclerView"
+                    android:id="@+id/homeRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </ScrollView>

@@ -4,24 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.finalapp.Adapter.C_Adapter;
-import com.example.finalapp.Domain.CryptoWallet;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -36,13 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fragment_home);
-        RecyclerView recyclerView = findViewById(R.id.MainRecyclerView);
-
-        setupHomeCryptoData();
-
-        C_Adapter adapter = new C_Adapter(this, homeCryptoData);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 //        setContentView(R.layout.activity_main);
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
@@ -72,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
 //        recyclerView.setLayoutManager(linearLayoutManager);
 //
 //        ArrayList<CryptoWallet> cryptoWalletArrayList = new ArrayList<>();
-//        ArrayList<Integer> lineData = new ArrayList<>();
-//        lineData.add(1000);
+//        ArnerayList<Integer> lineData = new ArrayList<>();
+//        liData.add(1000);
 //        lineData.add(1100);
 //        lineData.add(1200);
 //        lineData.add(1300);
