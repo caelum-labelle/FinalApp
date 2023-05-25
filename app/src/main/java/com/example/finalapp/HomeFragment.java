@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.finalapp.Adapter.C_Adapter;
@@ -73,7 +74,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = view.findViewById(R.id.homeRecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
@@ -86,14 +87,45 @@ public class HomeFragment extends Fragment {
 
         });
         recyclerView.setAdapter(adapter);
-        addDataToList();
+        addDataToList(1);
+
+        // Set OnClickListener for the buttons
+        Button btnHot = view.findViewById(R.id.btnHot);
+        Button btnList = view.findViewById(R.id.btnList);
+        Button btnGain = view.findViewById(R.id.btnGain);
+
+        btnHot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addDataToList(1);
+            }
+        });
+
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addDataToList(2);
+            }
+        });
+
+        btnGain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addDataToList(3);
+            }
+        });
+
         return view;
     }
     FirebaseControl fire = new FirebaseControl();
-    private void addDataToList(){
+    private void addDataToList(int ftype){
         mList.clear();
 //        mList.add(new HomeCryptoData("Name", "Price", "Change"));
-//        fire.AddCrypto(new HomeCryptoData("Jeno", "Sam", "Flores"));
+//        fire.AddCrypto(new HomeCryptoData("Btc", "5454", "231",3));
+//        fire.AddCrypto(new HomeCryptoData("Tnc", "5454", "231",2));
+//        fire.AddCrypto(new HomeCryptoData("Flx", "5454", "231",1));
+        fire.AddCrypto(new HomeCryptoData("Ctd", "4354", "441",2));
+        fire.AddCrypto(new HomeCryptoData("Dts", "45432", "411",3));
 //        mList.add(new HomeCryptoData("Mich", "None", "Sample"));
         DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://final-app-19fb2-default-rtdb.firebaseio.com/")
                 .getReference()
@@ -108,12 +140,13 @@ public class HomeFragment extends Fragment {
                     String cryptoName = snapshot.child("cryptoname").getValue(String.class);
                     String lastPrice = snapshot.child("lastprice").getValue(String.class);
                     String changes = snapshot.child("changes").getValue(String.class);
-//                    int isFeatured = snapshot.child("isFeatured").getValue(Integer.class);
+                    int type = snapshot.child("type").getValue(Integer.class);
 
-                    HomeCryptoData data = new HomeCryptoData(cryptoName, lastPrice, changes);
-                    mList.add(data);
+                    if(type==ftype){
+                        HomeCryptoData data = new HomeCryptoData(cryptoName, lastPrice, changes,type);
+                        mList.add(data);
+                    }
                 }
-
                 adapter.notifyDataSetChanged();
             }
 
