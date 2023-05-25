@@ -11,7 +11,7 @@ import com.example.finalapp.Adapter.C_Adapter;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<HomeCryptoData> homeCryptoData = new ArrayList<>();
+//    ArrayList<HomeCryptoData> homeCryptoData = new ArrayList<>();
 
 //    private RecyclerView.Adapter adapter;
 //    private RecyclerView recyclerView;
@@ -77,14 +77,14 @@ public class MainActivity extends AppCompatActivity {
 //        recyclerView.setAdapter(adapter);
 //    }
 
-    private void setupHomeCryptoData() {
-        String[] cryptonames = getResources().getStringArray(R.array.crypto_name_text);
-        String[] lastprice = getResources().getStringArray(R.array.last_price_text);
-        String[] changes = getResources().getStringArray(R.array.changes_text);
-
-        for(int i = 0; i < cryptonames.length; i++) {
-            homeCryptoData.add(new HomeCryptoData(cryptonames[i],lastprice[i],changes[i]));
-        }
-    }
+//    private void setupHomeCryptoData() {
+//        String[] cryptonames = getResources().getStringArray(R.array.crypto_name_text);
+//        String[] lastprice = getResources().getStringArray(R.array.last_price_text);
+//        String[] changes = getResources().getStringArray(R.array.changes_text);
+//
+//        for(int i = 0; i < cryptonames.length; i++) {
+//            homeCryptoData.add(new HomeCryptoData(cryptonames[i],lastprice[i],changes[i]));
+//        }
+//    }
 }
 

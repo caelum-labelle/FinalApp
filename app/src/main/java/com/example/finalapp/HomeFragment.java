@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.SoundEffectConstants;
 import android.view.View;
@@ -16,6 +17,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.finalapp.Adapter.C_Adapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -83,9 +89,38 @@ public class HomeFragment extends Fragment {
         addDataToList();
         return view;
     }
+    FirebaseControl fire = new FirebaseControl();
     private void addDataToList(){
         mList.clear();
-        mList.add(new HomeCryptoData("Name", "Price", "Change"));
-        mList.add(new HomeCryptoData("Mich", "None", "Sample"));
+//        mList.add(new HomeCryptoData("Name", "Price", "Change"));
+//        fire.AddCrypto(new HomeCryptoData("Jeno", "Sam", "Flores"));
+//        mList.add(new HomeCryptoData("Mich", "None", "Sample"));
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://final-app-19fb2-default-rtdb.firebaseio.com/")
+                .getReference()
+                .child("Crypto");
+
+        databaseRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                mList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    String title = snapshot.getKey();
+                    String cryptoName = snapshot.child("cryptoname").getValue(String.class);
+                    String lastPrice = snapshot.child("lastprice").getValue(String.class);
+                    String changes = snapshot.child("changes").getValue(String.class);
+//                    int isFeatured = snapshot.child("isFeatured").getValue(Integer.class);
+
+                    HomeCryptoData data = new HomeCryptoData(cryptoName, lastPrice, changes);
+                    mList.add(data);
+                }
+
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("Crypto", "Error retrieving data: " + databaseError.getMessage());
+            }
+        });
     }
 }
