@@ -82,7 +82,8 @@ public class HomeFragment extends Fragment {
         adapter.setOnItemClickListener(new C_Adapter.OnItemClickListener() {
             @Override
             public void onItemClick(HomeCryptoData data) {
-                System.out.println("I am okay");
+                Intent intent = new Intent(getContext(), Cryptos.class);
+                startActivity(intent);
             }
 
         });
