@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView.Adapter adapter;
+    /*private RecyclerView.Adapter adapter;
     private RecyclerView recyclerView;
 
     @Override
@@ -87,6 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new CryptoWalletAdapter(cryptoWalletArrayList);
         recyclerView.setAdapter(adapter);
-    }
+    }*/
 }
 

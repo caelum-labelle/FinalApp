@@ -36,6 +36,7 @@ public class ProfileFragment extends Fragment {
     private static final int PICK_IMAGE_REQUEST = 1;
     private static final int STORAGE_PERMISSION_REQUEST_CODE = 2;
     private Uri selectedImageUri;
+    private TextView verify;
 
 
     @Nullable
@@ -46,6 +47,7 @@ public class ProfileFragment extends Fragment {
         usernameTextView = view.findViewById(R.id.un);
         logoutButton = view.findViewById(R.id.logout);
         profileImageView = view.findViewById(R.id.prof);
+        verify = view.findViewById(R.id.ver);
 
         // Retrieve the username from SharedPreferences
         SharedPreferences preferences = getActivity().getSharedPreferences("MyPrefs", MODE_PRIVATE);
@@ -84,6 +86,15 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 // Handle logout button click event
                 logout();
+            }
+        });
+
+        verify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform the action to navigate to the "SendOTP" page here
+                Intent intent = new Intent(getActivity(), SendOTP.class);
+                startActivity(intent);
             }
         });
 

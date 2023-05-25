@@ -26,26 +26,5 @@ import com.example.finalapp.databinding.ActivityExplore2Binding;
 
 public class Explore2 extends AppCompatActivity {
 
-    private MaterialCardView f;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explore2);
-
-        f = view.findViewById(R.id.f);
-
-        f.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Explore3.class);
-                startActivity(intent);
-            }
-        });
-
-
-        return view;
-    }
-
 
 }
