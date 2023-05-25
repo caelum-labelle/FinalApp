@@ -36,6 +36,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="50dp"
             android:gravity="center"
+            android:textColor="?android:attr/textColorSecondary"
             android:text="We will send you an One Time Password on this mobile number."
             android:textSize="14sp"/>
 
@@ -47,6 +48,7 @@
             android:layout_marginEnd="30dp"
             android:gravity="center"
             android:text="Enter Mobile Number"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="14sp"/>
 
         <LinearLayout
@@ -89,16 +91,28 @@
             android:layout_marginEnd="70dp"
             android:background="@color/lightestgray" />
 
-        <Button
-            android:id="@+id/verification"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:text="Get OTP"
-            android:textColor="@color/white"
-            android:background="@drawable/verbtn"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="Get OTP"
+                android:textColor="@color/white"
+                android:background="@drawable/verbtn"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
 
     </LinearLayout>
     

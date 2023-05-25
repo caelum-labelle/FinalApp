@@ -37,8 +37,8 @@
             android:layout_marginEnd="50dp"
             android:gravity="center"
             android:text="@string/enter_the_otp_sent_to"
-            android:textSize="14sp"
-            android:textColor="@color/lightestgray"/>
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/textMobile"
@@ -49,6 +49,7 @@
             android:layout_marginEnd="50dp"
             android:gravity="center"
             android:textSize="14sp"
+            android:textColor="?android:attr/textColorSecondary"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -167,16 +168,30 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnVerify"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:text="@string/verify"
-            android:textColor="@color/white"
-            android:background="@drawable/verbtn"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="@string/verify"
+                android:textColor="@color/white"
+                android:background="@drawable/verbtn"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
     </LinearLayout>
 
 </ScrollView>

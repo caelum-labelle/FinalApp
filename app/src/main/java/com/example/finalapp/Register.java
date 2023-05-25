@@ -77,10 +77,15 @@ public class Register extends AppCompatActivity {
                                 editor.putString("username", usernameTxt);
                                 editor.apply();
 
+                                // Pass the registered username to the ProfileFragment
+                                Bundle bundle = new Bundle();
+                                bundle.putString("username", usernameTxt);
+
 
                                 Toast.makeText(Register.this, "Account created successfuly.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Register.this, HomePage.class);
                                 intent.putExtra("fragmentToLoad", "HomeFragment"); // Pass the desired fragment identifier
+                                intent.putExtras(bundle); // Pass the bundle to the intent
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(Register.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
@@ -96,6 +101,7 @@ public class Register extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(Register.this, Login.class));
                 finish();
             }
         });

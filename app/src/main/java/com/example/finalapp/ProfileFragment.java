@@ -49,6 +49,13 @@ public class ProfileFragment extends Fragment {
         profileImageView = view.findViewById(R.id.prof);
         verify = view.findViewById(R.id.ver);
 
+        // Retrieve the username from the arguments bundle
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String username = bundle.getString("username");
+            usernameTextView.setText(username);
+        }
+
         // Retrieve the username from SharedPreferences
         SharedPreferences preferences = getActivity().getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String username = preferences.getString("username", "");
@@ -62,6 +69,8 @@ public class ProfileFragment extends Fragment {
             selectedImageUri = Uri.parse(imageUriString);
             //profileImageView.setImageURI(selectedImageUri);
             Glide.with(this).load(selectedImageUri).into(profileImageView);
+        } else {
+            profileImageView.setImageResource(android.R.color.transparent);
         }
 
         profileImageView.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +110,12 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+    private void openImagePicker() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
+
     private void logout() {
         SharedPreferences preferences = getActivity().getSharedPreferences("MyPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
@@ -118,11 +133,6 @@ public class ProfileFragment extends Fragment {
         getActivity().finish(); // Optional: Close the current activity (ProfileFragment) after logout
     }
 
-    private void openImagePicker() {
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");
-        startActivityForResult(intent, PICK_IMAGE_REQUEST);
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
