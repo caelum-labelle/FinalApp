@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +60,21 @@ public class SocialFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_social, container, false);
+        View view = inflater.inflate(R.layout.fragment_social, container, false);
+        ImageButton btnLike = (ImageButton) view.findViewById(R.id.btnHeart);
+        btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btnLike.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.blackh).getConstantState())) {
+                    // The ImageButton has the desired image resource
+                    btnLike.setImageResource(R.drawable.redh);
+                    // Perform your desired actions here
+                } else {
+                    // The ImageButton does not have the desired image resource
+                    btnLike.setImageResource(R.drawable.blackh);
+                }
+            }
+        });
+        return view;
     }
 }
