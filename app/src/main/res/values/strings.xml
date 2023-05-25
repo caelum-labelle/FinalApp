@@ -54,4 +54,36 @@
     <string name="didn_t_received_otp">Didn\'t received OTP</string>
     <string name="resend_otp">Resend OTP</string>
     <string name="verify">Verify</string>
+    <string name="homename">Name</string>
+
+    <string-array name="crypto_name_text">
+        <item>BTC</item>
+        <item>ETY</item>
+        <item>EVB</item>
+        <item>TRC</item>
+        <item>YTE</item>
+        <item>WHT</item>
+        <item>HYG</item>
+    </string-array>
+
+    <string-array name="last_price_text">
+        <item>234.12</item>
+        <item>763.23</item>
+        <item>764.52</item>
+        <item>643.34</item>
+        <item>533.34</item>
+        <item>223.32</item>
+        <item>115.23</item>
+    </string-array>
+
+
+    <string-array name="changes_text">
+        <item>+4.12</item>
+        <item>+3.23</item>
+        <item>+4.52</item>
+        <item>+3.34</item>
+        <item>+3.34</item>
+        <item>+3.32</item>
+        <item>+5.23</item>
+    </string-array>
 </resources>
