@@ -1,7 +1,9 @@
-package com.example.finalapp;
+package com.example.finalapp.Adapter;
 
 import androidx.annotation.NonNull;
 
+import com.example.finalapp.Domain.UserComment;
+import com.example.finalapp.HomeCryptoData;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +28,12 @@ public class FirebaseControl {
             myRef = db.getReference("Crypto");
             crypto = data.getCryptoname();
             myRef.child(crypto).setValue(data);
+        }
+        public void AddComment(UserComment comment) {
+            db = FirebaseDatabase.getInstance();
+            myRef = db.getReference("Comments");
+            userName = comment.getUsername();
+            myRef.child(userName).setValue(comment);
         }
 
 }
