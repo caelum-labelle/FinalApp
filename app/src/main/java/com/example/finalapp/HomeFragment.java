@@ -1,5 +1,6 @@
 package com.example.finalapp;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,14 +16,18 @@ import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalapp.Adapter.C_Adapter;
+import com.google.android.play.core.integrity.v;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -39,6 +44,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<HomeCryptoData> mList = new ArrayList<>();
     private C_Adapter adapter;
+    Dialog myDialog;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -82,10 +88,20 @@ public class HomeFragment extends Fragment {
         adapter.setOnItemClickListener(new C_Adapter.OnItemClickListener() {
             @Override
             public void onItemClick(HomeCryptoData data) {
-                System.out.println("I am okay");
+//                Intent intent = new Intent(getContext(), Cryptos.class);
+//                startActivity(intent);
+                myDialog = new Dialog(requireContext());
+
+                //TextView cname = view.findViewById(R.id.txtCName);
+                ShowPopup(data.getCryptoname());
+                //ShowPopup(cname.getText().toString());
+                //ShowPopup(cname.getText().toString());
+
+
             }
 
         });
+
         recyclerView.setAdapter(adapter);
         addDataToList(1);
 
@@ -117,6 +133,36 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+
+    private void ShowPopup(String name) {
+        TextView txtclose;
+        Button btnConfirm;
+
+        myDialog.setContentView(R.layout.pop_up);
+        txtclose = (TextView) myDialog.findViewById(R.id.txtclose);
+        btnConfirm = (Button) myDialog.findViewById(R.id.btnConfirm);
+
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.show();
+
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance("https://final-app-19fb2-default-rtdb.firebaseio.com/");
+                DatabaseReference cryptoRef = database.getReference("Crypto");
+                DatabaseReference Crypto = cryptoRef.child(name);
+                Crypto.child("type").setValue(0);
+
+                myDialog.dismiss();
+            }
+        });
+    }
+
     FirebaseControl fire = new FirebaseControl();
     private void addDataToList(int ftype){
         mList.clear();

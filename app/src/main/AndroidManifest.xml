@@ -15,21 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalApp"
         tools:targetApi="31">
-        <activity
-            android:name=".Calendar2"
-            android:exported="false" />
-        <activity
-            android:name=".Calendar"
-            android:exported="false" />
-        <activity
-            android:name=".Resources"
-            android:exported="false" />
+
         <activity
             android:name=".LoginSignup"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

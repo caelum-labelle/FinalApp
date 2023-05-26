@@ -10,4 +10,7 @@
     <color name="flutter_sky">#027DFD</color>
     <color name="flutter_dark">#1F2233</color>
     <color name="lightestgray">#808080</color>
+    <color name="background">#F5F5FF</color>
+    <color name="popup">#7272C0</color>
+
 </resources>
