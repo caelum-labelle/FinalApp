@@ -98,7 +98,7 @@ public class PortfolioFragment extends Fragment {
 //                Intent intent = new Intent(getContext(), Cryptos.class);
 //                startActivity(intent);
                 myDialog = new Dialog(requireContext());
-                ShowPopup();
+                ShowPopup(data.getCryptoname());
 
 
             }
@@ -137,7 +137,7 @@ public class PortfolioFragment extends Fragment {
         return view;
     }
 
-    private void ShowPopup() {
+    private void ShowPopup(String name) {
         TextView txtclose;
         Button btnRemove;
 
@@ -151,15 +151,27 @@ public class PortfolioFragment extends Fragment {
             }
         });
         myDialog.show();
+
+        btnRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance("https://final-app-19fb2-default-rtdb.firebaseio.com/");
+                DatabaseReference cryptoRef = database.getReference("Crypto");
+                DatabaseReference Crypto = cryptoRef.child(name);
+                Crypto.child("type").setValue(1);
+
+                myDialog.dismiss();
+            }
+        });
     }
 
     FirebaseControl fire = new FirebaseControl();
     private void addDataToList(int ftype){
         mList.clear();
 //        mList.add(new HomeCryptoData("Name", "Price", "Change"));
-        fire.AddCrypto(new HomeCryptoData("Btc", "5454", "231",3));
-        fire.AddCrypto(new HomeCryptoData("Tnc", "5454", "231",2));
-        fire.AddCrypto(new HomeCryptoData("Flx", "5454", "231",1));
+//        fire.AddCrypto(new HomeCryptoData("Btc", "5454", "231",3));
+//        fire.AddCrypto(new HomeCryptoData("Tnc", "5454", "231",2));
+//        fire.AddCrypto(new HomeCryptoData("Flx", "5454", "231",1));
 //        fire.AddCrypto(new HomeCryptoData("Ctd", "4354", "441",2));
 //        fire.AddCrypto(new HomeCryptoData("Dts", "45432", "411",3));
 //        mList.add(new HomeCryptoData("Mich", "None", "Sample"));
