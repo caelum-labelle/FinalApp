@@ -91,7 +91,11 @@ public class HomeFragment extends Fragment {
 //                Intent intent = new Intent(getContext(), Cryptos.class);
 //                startActivity(intent);
                 myDialog = new Dialog(requireContext());
-                ShowPopup();
+
+                //TextView cname = view.findViewById(R.id.txtCName);
+                ShowPopup(data.getCryptoname());
+                //ShowPopup(cname.getText().toString());
+                //ShowPopup(cname.getText().toString());
 
 
             }
@@ -130,13 +134,14 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    private void ShowPopup() {
+    private void ShowPopup(String name) {
         TextView txtclose;
         Button btnConfirm;
 
         myDialog.setContentView(R.layout.pop_up);
         txtclose = (TextView) myDialog.findViewById(R.id.txtclose);
         btnConfirm = (Button) myDialog.findViewById(R.id.btnConfirm);
+
         txtclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -144,6 +149,18 @@ public class HomeFragment extends Fragment {
             }
         });
         myDialog.show();
+
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance("https://final-app-19fb2-default-rtdb.firebaseio.com/");
+                DatabaseReference cryptoRef = database.getReference("Crypto");
+                DatabaseReference Crypto = cryptoRef.child(name);
+                Crypto.child("type").setValue(0);
+
+                myDialog.dismiss();
+            }
+        });
     }
 
     FirebaseControl fire = new FirebaseControl();
