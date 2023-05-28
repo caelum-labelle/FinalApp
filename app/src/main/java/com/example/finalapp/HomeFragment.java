@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalapp.Adapter.C_Adapter;
+import com.example.finalapp.Adapter.FirebaseControl;
 import com.google.android.play.core.integrity.v;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -70,7 +70,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₱10,092"
+                    android:text="₱999,999"
                     android:textColor="@color/white"
                     android:textSize="40sp"
                     android:textStyle="bold"

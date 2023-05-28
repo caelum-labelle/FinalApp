@@ -45,7 +45,6 @@ public class SendOTP extends AppCompatActivity {
                         TimeUnit.SECONDS,
                         SendOTP.this,
                         new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
                             @Override
                             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                                 progress.setVisibility(View.GONE);
@@ -65,16 +64,11 @@ public class SendOTP extends AppCompatActivity {
                                 buttonGetOTP.setVisibility(View.VISIBLE);
                                 Intent intent = new Intent(getApplicationContext(), VerifyOTP.class);
                                 intent.putExtra("mobile", inputMobile.getText().toString());
-                                intent.putExtra("verificationid", verificationId);
+                                intent.putExtra("verificationId", verificationId); // Fix the key name here
                                 startActivity(intent);
                             }
                         }
-
                 );
-
-                Intent intent = new Intent(getApplicationContext(), VerifyOTP.class);
-                intent.putExtra("mobile", inputMobile.getText().toString());
-                startActivity(intent);
             }
         });
     }

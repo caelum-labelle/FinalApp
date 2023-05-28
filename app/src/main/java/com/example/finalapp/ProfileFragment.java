@@ -40,6 +40,7 @@ public class ProfileFragment extends Fragment {
     private AppCompatButton verify;
     private AppCompatButton calendarButton;
 
+    private AppCompatButton resourcesButton;
 
     @Nullable
     @Override
@@ -49,8 +50,8 @@ public class ProfileFragment extends Fragment {
         usernameTextView = view.findViewById(R.id.un);
         logoutButton = view.findViewById(R.id.logout);
         profileImageView = view.findViewById(R.id.prof);
-        verify = view.findViewById(R.id.ver);AppCompatButton
-         calendarButton = view.findViewById(R.id.calendar);
+        verify = view.findViewById(R.id.ver);
+        calendarButton = view.findViewById(R.id.calendar);
 
         // Set OnClickListener for the calendarButton
         calendarButton.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +60,18 @@ public class ProfileFragment extends Fragment {
                 // Start the Calendar activity
                 Intent intent = new Intent(getActivity(), Calendar.class);
                 startActivity(intent);
+            }
+        });
+
+        // Assuming you have assigned the resourcesButton using findViewById
+        resourcesButton = view.findViewById(R.id.resources);
+
+        resourcesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start Resources activity
+                Intent intent = new Intent(v.getContext(), Resources.class);
+                v.getContext().startActivity(intent);
             }
         });
 

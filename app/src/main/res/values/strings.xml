@@ -56,6 +56,7 @@
     <string name="verify">Verify</string>
     <string name="homename">Name</string>
     <string name="calendar">Calendar</string>
+    <string name="resources">Resources</string>
 
     <string-array name="crypto_name_text">
         <item>BTC</item>

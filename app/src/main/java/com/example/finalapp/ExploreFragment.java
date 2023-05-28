@@ -10,12 +10,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.card.MaterialCardView;
-
-import org.w3c.dom.Text;
 
 public class ExploreFragment extends Fragment {
     private TextView tnews;
@@ -43,10 +40,16 @@ public class ExploreFragment extends Fragment {
         tnews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Explore2.class);
-                startActivity(intent);
+                try {
+                    Intent intent = new Intent(getActivity(), Explore.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    // Handle any potential errors or exceptions here
+                }
             }
         });
+
 
         tech.setOnClickListener(new View.OnClickListener() {
             @Override

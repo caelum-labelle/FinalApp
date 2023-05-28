@@ -66,17 +66,16 @@ public class VerifyOTP extends AppCompatActivity {
                         || Code4.getText().toString().trim().isEmpty()
                         || Code5.getText().toString().trim().isEmpty()
                         || Code6.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(VerifyOTP.this, "Please enter valid code", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VerifyOTP.this, "Please enter a valid code", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                String code =
-                        Code1.getText().toString() +
-                                Code2.getText().toString() +
-                                Code3.getText().toString() +
-                                Code4.getText().toString() +
-                                Code5.getText().toString() +
-                                Code6.getText().toString();
 
+                String code = Code1.getText().toString() +
+                        Code2.getText().toString() +
+                        Code3.getText().toString() +
+                        Code4.getText().toString() +
+                        Code5.getText().toString() +
+                        Code6.getText().toString();
 
                 if (verificationId != null) {
                     progress.setVisibility(View.VISIBLE);
@@ -86,6 +85,7 @@ public class VerifyOTP extends AppCompatActivity {
                             verificationId,
                             code
                     );
+
                     FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -96,8 +96,7 @@ public class VerifyOTP extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         // Verification successful
                                         showToast("Account verified");
-                                        Intent intent = new Intent(VerifyOTP.this, ProfileFragment.class); // Assuming MainActivity is the class containing ProfileFragment
-                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Optional flags to clear the activity stack
+                                        Intent intent = new Intent(VerifyOTP.this, ProfileFragment.class);
                                         startActivity(intent);
                                         finish(); // Optional, if you want to close the VerifyOTP activity
                                     } else {
@@ -108,6 +107,8 @@ public class VerifyOTP extends AppCompatActivity {
                 }
             }
         });
+
+
 
         findViewById(R.id.textResendOTP).setOnClickListener(new View.OnClickListener() {
             @Override

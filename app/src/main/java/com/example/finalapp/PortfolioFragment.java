@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.finalapp.Adapter.C_Adapter;
+import com.example.finalapp.Adapter.FirebaseControl;
 import com.example.finalapp.Adapter.P_Adapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
